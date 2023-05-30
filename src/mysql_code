@@ -1,0 +1,23 @@
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="127.0.0.1",
+  user="user_cli",
+  passwd="pass",
+  database='product',
+    port = "3306"
+)
+
+mycursor = mydb.cursor()
+
+sql = "INSERT INTO sensors_data (temperature, humidity, co2) VALUES (%s, %s, %s)"
+val = (temp, humidity, co2['co2'])
+mycursor.execute(sql, val)
+
+mydb.commit()
+
+mycursor.execute("SELECT temperature, humidity, co2 FROM sensors_data where id = (select max(id) from sensors_data)")
+
+result = mycursor.fetchall()
+
+print (result)
