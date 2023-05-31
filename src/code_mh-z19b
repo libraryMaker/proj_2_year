@@ -1,6 +1,0 @@
-import mh_z19
-co2 = mh_z19.read()
-print("CO2: {}ppm ".format(co2['co2'])))
-
-
-

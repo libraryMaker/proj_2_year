@@ -20,4 +20,6 @@ mycursor.execute("SELECT temperature, humidity, co2 FROM sensors_data where id =
 
 result = mycursor.fetchall()
 
+
+
 print (result)
