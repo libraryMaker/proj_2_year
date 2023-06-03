@@ -1,5 +1,4 @@
 show databases;
-root 746td215
 create database product;
 CREATE USER 'user_cli'@'localhost' IDENTIFIED BY 'pass';
 GRANT SELECT ON product.* TO 'user_cli'@'localhost';
