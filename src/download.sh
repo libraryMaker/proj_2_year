@@ -18,3 +18,4 @@ sudo mysql_secure_installation
 sudo pip install mysql-connector-python
 sudo mysql -u root -p < mysql_script.sql
 sudo reboot
+
